@@ -1,0 +1,47 @@
+.searchBoxOuter {
+    display: flex;
+    padding: 15rpx;
+    background: #EEDD82;
+    height: 60rpx;
+}
+
+.searchBoxInner {
+    display: flex;
+    background: white;
+    border-radius: 40rpx;
+    height: 60rpx;
+    width: 570rpx;
+}
+
+.searchInput {
+    margin-left: 20rpx;
+    height: 60rpx;
+    font-size: 40rpx;
+    width: 85%
+}
+
+.clearIcon {
+    display: flex;
+    height: 60rpx;
+    align-items: center;
+    margin-right: 20rpx;
+}
+
+
+.searchIcon {
+    width: 58rpx;
+    height: 58rpx;
+    margin-left: 8rpx;
+    margin-right: 8rpx;
+}
+
+.groupAddIcon {
+    width: 58rpx;
+    height: 58rpx;
+    margin-left: 8rpx;
+    margin-right: 8rpx;
+}
+
+/* .clearIcon {
+    justify-content: flex-end;
+} */

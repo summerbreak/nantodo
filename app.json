@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/groups/groups",
+        "pages/settings/settings"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#EEDD82",
+        "navigationBarTitleText": "南土豆",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "borderStyle": "white",
+        "backgroundColor": "#EEDD82",
+        "color": "#fff",
+        "selectedColor": "#FFA500",
+        "list": [{
+            "pagePath": "pages/groups/groups",
+            "iconPath": "/assets/icons/groups.png",
+            "selectedIconPath": "/assets/icons/groups_selected.png",
+            "text": "群组"
+        }, {
+            "pagePath": "pages/home/home",
+            "iconPath": "/assets/icons/home.png",
+            "selectedIconPath": "/assets/icons/home_selected.png",
+            "text": "待办"
+        }, {
+            "pagePath": "pages/settings/settings",
+            "iconPath": "/assets/icons/settings.png",
+            "selectedIconPath": "/assets/icons/settings_selected.png",
+            "text": "设置"
+        }]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+<view class="searchBoxOuter">
+    <image src=" /assets/icons/group_add.png" type="center" class="groupAddIcon"></image>
+    <view class="searchBoxInner">
+        <input class="searchInput" placeholder="搜索群组" maxlength="20" value="{{inputVal}}" bindinput="inputSearchText"></input>
+        <icon type="clear" class="clearIcon" bindtap="clearSearchBox" wx:if="{{isClear}}"></icon>
+    </view>
+    <image src=" /assets/icons/search.png" type="center" class="searchIcon"></image>
+</view>
