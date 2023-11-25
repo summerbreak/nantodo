@@ -2,10 +2,13 @@
     "pages": [
         "pages/home/home",
         "pages/groups/groups",
+        "pages/groups-memberArrange/groups-memberArrange",
+        "pages/groups-memberArrange-assignmentArrange/groups-memberArrange-assignmentArrange",
         "pages/settings/settings",
         "pages/settings-remind/settings-remind",
-        "pages/groups-memberArrange/groups-memberArrange",
-        "pages/groups-memberArrange-assignmentArrange/groups-memberArrange-assignmentArrange"
+        "pages/settings-counter/settings-counter",
+        "pages/settings-help/settings-help",
+        "pages/settings-about/settings-about"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -38,6 +41,8 @@
             }
         ]
     },
+    "cloud": true,
     "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
 }

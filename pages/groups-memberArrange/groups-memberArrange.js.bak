@@ -12,9 +12,8 @@ Page({
         isSearched: false,
         searchedUsers: [],
         group_id: '',
-        group: '',
-        originGroup: '',
-        openId: ''
+        group: ''
+
     },
     //获取数据
     async getData(id, collectionName) {
@@ -24,6 +23,9 @@ Page({
         })
         await wx.cloud.callFunction({
             name: 'getData',
+            // config: {
+            //     env: this.data.envId
+            // },
             data: {
                 collectionName,
                 id
@@ -44,23 +46,6 @@ Page({
                 wx.hideLoading()
             })
         return data
-    },
-    //获取openid(微信自带的云函数)
-    async getOpenId() {
-        wx.showLoading({
-            title: '加载中',
-        });
-        await wx.cloud.callFunction({
-            name: 'getOpenId',
-        }).then((resp) => {
-            this.setData({
-                openId: resp.result.openid
-            });
-            wx.hideLoading()
-        }).catch((e) => {
-            console.log(e)
-            wx.hideLoading();
-        });
     },
     //根据openId拉取用户数据
     async getUser(openId) {
@@ -109,23 +94,21 @@ Page({
                 wx.hideLoading()
             })
     },
-    async onLoad(options) {
+    onLoad(options) {
         console.log('传过来的', options._id)
         this.setData({
             group_id: options._id
         })
-        await this.getOpenId()
     },
     async onShow() {
         var tem = await this.getData(this.data.group_id, 'Groups')
-
         for (var i = 0; i < tem.memberList.length; i++) {
             tem.memberList[i].member = await this.getUser(tem.memberList[i].memberId)
         }
+        console.log('tem', tem)
         this.setData({
             group: tem
         })
-        console.log('tem', tem)
     },
     goToAssignment(e) {
         wx.navigateTo({
@@ -253,68 +236,6 @@ Page({
             isAddNewMemberTapped: false,
             isSearched: false,
             searchedUsers: []
-        })
-    },
-    async deleteMember(e) {
-        if (this.data.openId != this.data.group.administratorId)
-            return
-        console.log('delmem e', e)
-        var delId = e.currentTarget.dataset.memberid
-        if (delId == this.data.group.administratorId) {
-            wx.showToast({
-                title: '管理员不可被删除',
-                icon: 'error'
-            })
-            return
-        }
-        var tmpGroup = this.data.group
-        var tmpMemberList = tmpGroup.memberList
-        var delMember = null
-        var delTaskList = null
-        for (var i = 0, lenI = tmpMemberList.length; i < lenI; i++) {
-            if (tmpMemberList[i].memberId == delId) {
-                delMember = tmpMemberList[i].member
-                delTaskList = tmpMemberList[i].taskIdList
-                break
-            }
-        }
-
-        wx.showModal({
-            title: '确定删除“' + delMember.name + '”吗？'
-        }).then(async res => {
-            if (res.confirm) {
-                for (var i = 0, lenI = delMember.groupIdList.length; i < lenI; i++) {
-                    if (delMember.groupIdList[i] == this.data.group_id) {
-                        delMember.groupIdList.splice(i, 1)
-                        break
-                    }
-                }
-                for (var i = delMember.taskIdList.length - 1; i >= 0; i--) {
-                    for (var j = 0, lenJ = delTaskList.length; j < lenJ; j++) {
-                        if (delMember.taskIdList[i] == delTaskList[j]) {
-                            delMember.taskIdList.splice(i, 1)
-                            break
-                        }
-                    }
-                }
-                await this.updateData('Users', delMember._id, delMember)
-                for (var i = 0, lenI = tmpMemberList.length; i < lenI; i++) {
-                    if (tmpMemberList[i].memberId == delId) {
-                        tmpMemberList.splice(i, 1)
-                        break
-                    }
-                }
-                this.setData({ group: tmpGroup })
-                var toDelGroup = await this.getData(this.data.group_id, 'Groups')
-                console.log('toDel = ', toDelGroup)
-                for (var i = 0, lenI = toDelGroup.memberList.length; i < lenI; i++) {
-                    if (toDelGroup.memberList[i].memberId == delId) {
-                        toDelGroup.memberList.splice(i, 1)
-                        break
-                    }
-                }
-                await this.updateData('Groups', toDelGroup._id, toDelGroup)
-            }
         })
     }
 

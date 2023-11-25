@@ -1,0 +1,25 @@
+.titlepic {
+    height: 200rpx;
+}
+
+.title {
+    font-size: 60rpx;
+    font-weight: bolder;
+    padding: 20rpx;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 40rpx;
+    font-weight: bold;
+    padding: 20rpx 10rpx;
+}
+
+.content {
+    padding: 10rpx 20rpx;
+}
+
+.pic {
+    width: 100%;
+    height: 600rpx;
+}

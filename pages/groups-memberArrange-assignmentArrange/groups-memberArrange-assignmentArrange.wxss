@@ -1,4 +1,8 @@
 /* pages/assignmentArrange/assignmentArrange.wxss */
+.taskContent {
+    max-height: 100rpx;
+}
+
 .titleBox {
     padding-top: 30rpx;
     border-radius: 15rpx;
@@ -11,6 +15,7 @@
 .assignmentAdd {
     height: 130rpx !important;
     /* background-color: blanchedalmond; */
+    font-weight: bold;
 }
 
 .background {
@@ -85,6 +90,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
+    word-break: break-all;
 }
 
 .handler {
@@ -119,7 +125,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
-    border-bottom: thin dashed #eadada;
+    border-bottom: thin dashed #8b8b8b;
     padding: 4rpx;
 
 }
@@ -139,4 +145,26 @@
     position: absolute;
     left: 550rpx;
     bottom: 110rpx;
+}
+
+.task_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280;
+    height: 85%;
+    border-radius: 15rpx;
+    background: red;
+}
+
+.task_right text {
+    color: white;
+}
+
+.notTask {
+    padding-top: 100rpx;
+    text-align: center;
+    font-size: 40rpx;
+    color: #999;
 }

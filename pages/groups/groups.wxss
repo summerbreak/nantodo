@@ -16,11 +16,6 @@
     opacity: 0.5;
 }
 
-.searchBarOuter {
-    background: #EEDD82;
-    height: 70rpx;
-}
-
 .groupAddIcon {
     display: flex;
     margin-left: -10rpx;
@@ -28,16 +23,6 @@
     /* background: lightyellow; */
     padding: 10rpx;
     border-radius: 10rpx;
-}
-
-.groupAddIcon text {
-    margin-left: 10rpx;
-}
-
-.left_size {
-    /* font-size: larger; */
-    /* font-weight: bold; */
-    /* margin-right: 25rpx; */
 }
 
 .container_group view {
@@ -166,6 +151,10 @@
     padding: 10rpx;
 }
 
+.noticeContent{
+    border: white;
+    max-height: 400rpx;   
+}
 
 .closeBox {
     background-color: lightgray;
@@ -267,7 +256,7 @@
     font-weight: bold;
     margin-right: 25rpx;
     position: relative;
-    bottom: 10rpx;
+    bottom: 20rpx;
 }
 
 .list {

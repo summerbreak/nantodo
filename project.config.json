@@ -1,15 +1,9 @@
 {
-    "appid": "wx57ada97c37c63881",
     "compileType": "miniprogram",
-    "libVersion": "2.23.4",
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
     "setting": {
         "urlCheck": true,
         "coverView": true,
-        "es6": true,
+        "es6": false,
         "postcss": true,
         "lazyloadPlaceholderEnable": false,
         "preloadBackgroundData": false,
@@ -33,12 +27,22 @@
         },
         "disableUseStrict": false,
         "useCompilerPlugins": false,
-        "minifyWXML": true
+        "minifyWXML": true,
+        "useIsolateContext": true,
+        "ignoreUploadUnusedFiles": true
     },
     "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
     },
-    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "cloudfunctionRoot": "cloudfunctions/",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+    "libVersion": "2.24.2",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "appid": "wx57ada97c37c63881"
 }

@@ -1,0 +1,53 @@
+<view style="display: flex;justify-content: center;">
+    <image src="/assets/icons/help_title.png" mode="aspectFit" class="titlepic"></image>
+</view>
+<view class='title'>用前须知</view>
+<view class="content">
+    <text>因为技术问题目前南土豆存在加载较慢的情况，我们会努力改进。</text>
+    <text style="color: red;">当页面正在“加载中”时请勿切换页面，以免产生错误。</text>
+</view>
+<view class='title'>一、待办</view>
+<view class="subtitle">1. 创建我的待办</view>
+<view class="content">在“待办”页轻触上端按钮，填写任务名称，优先级，ddl等。</view>
+<view class="subtitle">2. 个人待办</view>
+<view class="content">轻触个人待办下方展开栏可进行四项操作：标记为“完成”、标记为“重要”、重设DDL、删除待办。</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/c44065f04bd7a655.jpg" mode="aspectFit" class="pic"></image>
+<view class='content'>标记为“完成”：在完成任务后打勾，会移出你的待办列表</view>
+<view class='content'>标记为“重要”：会在“待办”页优先展示</view>
+<view class='content'>重设DDL：调整待办任务的截止时间</view>
+<view class='content'>删除待办：将不必要的任务从待办列表中移除</view>
+<view class="subtitle">3. 群组任务/公告</view>
+<view class="content">当你加入其他群组后，组长给你分配的任务/群公告也会显示在此。对于群组任务，你可以标记为“完成”或“重要”。</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/eeae9e73a6d234ef.jpg" mode="aspectFit" class="pic"></image>
+<view class="content">对于群组公告，你可以确认收到。</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/1f78a63e52f771eb.jpg" mode="aspectFit" class="pic"></image>
+<view class="subtitle">4. 紧急任务/逾期任务</view>
+<view class="content">当待办任务的DDL距离现在不超过1天时会变为紧急任务，突出显示。当待办任务已过DDL但仍未标记为“完成”则会被视为逾期任务。个人待办可在逾期后重新调整DDL。</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/7a145973143960d8.jpg" mode="aspectFit" class="pic"></image>
+<view class='title'>二、群组</view>
+<view class="subtitle">1. 创建新的群组</view>
+<view class="content">在“群组”页轻触上端按钮，填写群组名称，详情等等。创建者即为本群的【管理员】（组长），有权给每一位组员发布群组任务，解散群组等等。</view>
+<view class="subtitle">2. 添加/删除公告</view>
+<view class="content">组员可以利用“公告”交流。展开群组后会出现公告栏，可自由添加/删除公告。每发布一条公告后，所有群组成员均会收到一条公告消息。在创建新的群组后会默认添加一条“本群简介”公告。</view>
+<view class="subtitle">3. 查看成员列表-添加/删除成员</view>
+<view class="content">轻触“成员列表”按钮可查看当前群组的所有成员，并添加新的成员。在搜索框中搜索待添加成员的姓名或学号，勾选后提交即可拉入新组员。请勿重复添加组员。【仅管理员可添加成员】</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/6d13c6d5ec63cdca.jpg" mode="aspectFit" class="pic"></image>
+<view class="content">长按列表中成员可删除成员。【仅管理员可删除成员，管理员不可被删除】</view>
+<view class="subtitle">4. 查看/添加/删除成员任务</view>
+<view class="content">在“成员列表”中选择任一成员即可查看该成员当前的任务列表。成员任务列表可实时查看任务进度，被组员标记为“完成”的任务会得到反馈。长按任务可以删除任务。【仅管理员可对群组任务操作，组员仅可查看】</view>
+<image src="https://s3.bmp.ovh/imgs/2022/06/03/8d64da8f58dac468.jpg" mode="aspectFit" class="pic"></image>
+<view class="subtitle">5. 解散群组</view>
+<view class="content">展开群组，轻触“解散群组”按钮即可。群组解散后组内的所有公告和任务也会消失。</view>
+<view class='title'>三、设置</view>
+<view class="subtitle">1. 登入/登出</view>
+<view class="content">新用户在第一次进入“设置”页时会弹出欢迎页进行登入，若已登入可退出登录。若想正常使用“群组”功能，请确保自己已登入。</view>
+<view class="subtitle">2. 提醒</view>
+<view class="content">【此功能尚在开发中，敬请期待~】对于每一个待办任务可设置一系列提醒操作。</view>
+<view class="subtitle">3. 修改个人信息</view>
+<view class="content">可修改自己的姓名与学号，方便他人创建群组添加组员时搜索。</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/fccd634ad22f7e7e.jpg" mode="aspectFit" class="pic"></image>
+<view class="subtitle">4. 统计</view>
+<view class="content">南土豆会贴心地记录你自使用以来完成的任务数以及逾期的任务数。自己的任务一定要及时做完哦。你说前段时间状态不好，想重新记录？没问题，记录可随时清零。</view>
+<image src="https://s3.bmp.ovh/imgs/2022/05/29/ffd2d0c382632468.jpg" mode="aspectFit" class="pic"></image>
+<view class="subtitle">5.看到这里还有问题？</view>
+<view class="content">请前往“设置”页中的“关于”，加入我们的交流群，欢迎与我们直接沟通。</view>

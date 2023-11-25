@@ -22,6 +22,11 @@ Page({
             { value: "6", name: "周六", checked: false }
         ]
     },
+    onShow() {
+        wx.showModal({
+            title: "该功能正在开发中，敬请期待~"
+        })
+    },
 
     switchDDLRemindTime(e) { //开启/关闭临近DDL提醒
         this.setData({
